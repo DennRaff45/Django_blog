@@ -6,9 +6,9 @@ from .models import Post
 найдено), если объект не найден"""
 
 
-def post_detail(request):
+def post_detail(request, pk):
     post = get_object_or_404(Post,
-                             id=id,
+                             pk=pk,
                              status=Post.Status.PUBLISHED)
 
     return render(request,
